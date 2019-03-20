@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Function-ception</title>
+		<script type="text/javascript">
+			function RotateLeft()
+			// Assumes: Three images displayed on the page
+			// Results: Rotates the images in a cycle to the left
+			{
+				saved=document.getElementById('leftImg').src;
+					document.getElementById('leftImg').src=
+						document.getElementById('centerImg').src;
+					document.getElementById('centerImg').src=
+						document.getElementById('rightImg').src;
+					document.getElementById('rightImg').src=saved;
+			}
+
+			function RotateRight()
+			// Assumes: Three images diplayed on the page
+			// Results: Rotates the images in a cycle to the right
+			{
+				saved=document.getElementById('rightImg').src;
+					document.getElementById('rightImg').src=
+						document.getElementById('centerImg').src;
+					document.getElementById('centerImg').src=
+						document.getElementById('leftImg').src;
+					document.getElementById('leftImg').src=saved;
+			}
+		</script>
+	</head>
+	<body>
+		<div style="text-align:center">
+			<h2> Image Swapper </h2>
+			<p>
+				<img id="leftImg" src="http://balance3e.com/Images/happy.gif">
+				<img id="centerImg" src="http://balance3e.com/Images/sad.gif">
+				<img id="rightImg" src="http://balance3e.com/Images/mystery.gif">
+			</p>
+			<input type="button" value="Rotate Left"
+				onclick="RotateLeft();">
+			<input type="button" value="Rotate Right"
+				onclick="RotateRight();">
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div style="text-align:center">
+			<h2>Bit & Value Calculator</h2>
+		</div>
+	</body>
+</html>
